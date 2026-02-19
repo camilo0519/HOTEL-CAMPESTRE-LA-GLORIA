@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hospedaje Tipo Iglú en Hotel Campestre La Gloria">
+    <title>Iglú | Hotel Campestre La Gloria</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/LOGO1BANNER.png" alt="Hotel Campestre La Gloria Logo">
+                </a>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="cabanas.html" class="nav-link">Cabañas</a>
+                </li>
+                <li><a href="hospedajes.html" class="nav-link">Hospedajes</a></li>
+                <li><a href="iglu.html" class="nav-link active">Iglú</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <header class="hero" style="height: 50vh; min-height: 400px;">
+        <div class="hero-overlay"></div>
+        <img src="assets/images/IMG_4897.JPG" alt="Iglú"
+            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
+        <div class="hero-content">
+            <h1 class="hero-title">Experiencia Iglú</h1>
+            <p class="hero-subtitle">Una conexión única con la naturaleza</p>
+        </div>
+    </header>
+
+    <!-- Iglú Content -->
+    <section class="cabin-detail">
+        <div class="container">
+            <div class="cabin-header">
+                <h2 class="cabin-title">Hospedaje Tipo Iglú</h2>
+                <p class="cabin-description">
+                    Vive una experiencia inolvidable en nuestro exclusivo Iglú. Perfecto para parejas que buscan algo
+                    diferente.
+                </p>
+            </div>
+
+            <div class="cabin-amenities">
+                <h3>Incluye:</h3>
+                <ul class="amenities-list">
+                    <li>🏡 2 días / 1 noche en hospedaje tipo iglú</li>
+                    <li>🛏 Cama doble y baño privado (sin agua caliente)</li>
+                    <li>🍽 Desayuno americano: huevos al gusto, arepa, queso, fruta, jugo y café o chocolate</li>
+                    <li>🏊 Piscina para niños y adultos</li>
+                    <li>📶 Wifi + salón de juegos (billar, sapo, ping pong)</li>
+                    <li>⚽ Juegos infantiles y zonas verdes</li>
+                    <li>🚗 Parqueadero privado y seguridad 24/7</li>
+                </ul>
+            </div>
+
+            <!-- Carousel for Iglú -->
+            <div class="content-carousel" id="carousel-iglu">
+                <div class="carousel-slide active">
+                    <img src="assets/images/IMG_2155.JPG" alt="Interior IGLÚ de noche">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/IMG_4897.JPG" alt="Exterior IGLÚ">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/IMG_2121.JPG" alt="Vista interior IGLÚ de día">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/IMG_2128.JPG" alt="Experiencia IGLÚ atardecer">
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Iglú</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Hotel Campestre La Gloria</h4>
+                    <p>Tu refugio de tranquilidad en el Lago Calima</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cabanas.html">Cabañas</a></li>
+                        <li><a href="hospedajes.html">Hospedajes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel Campestre La Gloria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

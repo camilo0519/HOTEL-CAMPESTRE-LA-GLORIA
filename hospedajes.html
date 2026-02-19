@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Opciones de Hospedaje en Hotel Campestre La Gloria">
+    <title>Hospedajes | Hotel Campestre La Gloria</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/LOGO1BANNER.png" alt="Hotel Campestre La Gloria Logo">
+                </a>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="cabanas.html" class="nav-link">Cabañas</a>
+                </li>
+                <li><a href="hospedajes.html" class="nav-link active">Hospedajes</a></li>
+                <li><a href="iglu.html" class="nav-link">Iglú</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <header class="hero" style="height: 50vh; min-height: 400px;">
+        <div class="hero-overlay"></div>
+        <img src="assets/images/IMG_2155.JPG" alt="Hospedajes"
+            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
+        <div class="hero-content">
+            <h1 class="hero-title">Nuestros Hospedajes</h1>
+            <p class="hero-subtitle">Confort y naturaleza en un solo lugar</p>
+        </div>
+    </header>
+
+    <!-- Hospedajes Content -->
+    <section class="cabin-detail">
+        <div class="container">
+
+            <!-- Hospedaje Tipo 1: Suite Panorama -->
+            <div class="cabin-header">
+                <h2 class="cabin-title">Suite Panorama</h2>
+                <p class="cabin-description">
+                    Disfruta de una vista privilegiada al Lago Calima desde nuestra Suite Panorama. Diseñada para
+                    aquellos que buscan un nivel extra de confort y exclusividad.
+                </p>
+            </div>
+
+            <!-- Carousel for Suite -->
+            <div class="content-carousel" id="carousel-suite">
+                <div class="carousel-slide active">
+                    <img src="assets/images/IMG_2155.JPG" alt="Suite Panorama Vista 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/IMG_2128.JPG" alt="Suite Panorama Baño">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/IMG_2106.JPG" alt="Suite Panorama Cama">
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+
+            <div class="cabin-amenities">
+                <h3>Incluye:</h3>
+                <ul class="amenities-list">
+                    <li>Cama King Size</li>
+                    <li>Balcón privado</li>
+                    <li>Desayuno a la carta</li>
+                    <li>Jacuzzi privado</li>
+                    <li>Aire acondicionado</li>
+                </ul>
+            </div>
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Suite</a>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #ddd; margin: 4rem 0;">
+
+            <!-- Hospedaje Tipo 2: Habitación Estándar -->
+            <div class="cabin-header">
+                <h2 class="cabin-title">Habitación Estándar Nature</h2>
+                <p class="cabin-description">
+                    Nuestras habitaciones estándar ofrecen todo lo necesario para un descanso reparador después de un
+                    día de aventuras. Cómodas, limpias y rodeadas de jardines.
+                </p>
+            </div>
+
+            <!-- Carousel for Standard -->
+            <div class="content-carousel" id="carousel-standard">
+                <div class="carousel-slide active">
+                    <img src="assets/images/IMG_4896.JPG" alt="Habitación Estándar Exterior">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/IMG_9712.JPEG" alt="Habitación Estándar Interior">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/IMG_4898.JPG" alt="Habitación Estándar Vista">
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+
+            <div class="cabin-amenities">
+                <h3>Incluye:</h3>
+                <ul class="amenities-list">
+                    <li>Cama Doble</li>
+                    <li>Baño privado</li>
+                    <li>Ventilador</li>
+                    <li>Wi-Fi</li>
+                    <li>Desayuno americano</li>
+                </ul>
+            </div>
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Habitación</a>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #ddd; margin: 4rem 0;">
+
+            <!-- Hospedaje Tipo 3: Glamping -->
+            <div class="cabin-header">
+                <h2 class="cabin-title">Glamping Aventura</h2>
+                <p class="cabin-description">
+                    Conecta con la naturaleza sin sacrificar comodidad. Nuestras tiendas de glamping están equipadas con
+                    camas reales y energía eléctrica.
+                </p>
+            </div>
+
+            <!-- Carousel for Glamping -->
+            <div class="content-carousel" id="carousel-glamping">
+                <div class="carousel-slide active">
+                    <img src="assets/images/IMG_4897.JPG" alt="Glamping Exterior">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/IMG_2155.JPG" alt="Glamping Noche">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/images/IMG_4899.JPG" alt="Glamping Atardecer">
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+
+            <div class="cabin-amenities">
+                <h3>Incluye:</h3>
+                <ul class="amenities-list">
+                    <li>Cama Doble</li>
+                    <li>Baño compartido de lujo</li>
+                    <li>Zona de fogata</li>
+                    <li>Desayuno tipo picnic</li>
+                </ul>
+            </div>
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Glamping</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Hotel Campestre La Gloria</h4>
+                    <p>Tu refugio de tranquilidad en el Lago Calima</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cabanas.html">Cabañas</a></li>
+                        <li><a href="iglu.html">Iglú</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel Campestre La Gloria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
