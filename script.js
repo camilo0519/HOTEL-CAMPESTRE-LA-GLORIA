@@ -11,56 +11,65 @@ const navLinks = document.querySelectorAll('.nav-link');
 const contactForm = document.getElementById('contactForm');
 
 // === Navbar Scroll Effect ===
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
 
 // === Mobile Menu Toggle ===
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
 
-    // Animate hamburger icon
-    const spans = hamburger.querySelectorAll('span');
-    if (navMenu.classList.contains('active')) {
-        spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(8px, -8px)';
-    } else {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-    }
-});
+        // Animate hamburger icon
+        const spans = hamburger.querySelectorAll('span');
+        if (spans.length === 3) {
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(8px, -8px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        }
+    });
+}
 
 // === Close Mobile Menu on Link Click ===
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+if (navLinks.length > 0 && navMenu && hamburger) {
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
 
-        // Reset hamburger icon
-        const spans = hamburger.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
+            // Reset hamburger icon
+            const spans = hamburger.querySelectorAll('span');
+            if (spans.length === 3) {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
     });
-});
+}
 
 // === Smooth Scrolling for Anchor Links ===
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
         const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+        if (targetId === '#' || !targetId.startsWith('#')) return;
 
         const targetElement = document.querySelector(targetId);
 
         if (targetElement) {
-            const navbarHeight = navbar.offsetHeight;
+            e.preventDefault();
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
             const targetPosition = targetElement.offsetTop - navbarHeight;
 
             window.scrollTo({
@@ -72,42 +81,60 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // === Contact Form Validation & Submission ===
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    // Get form values
-    const nombre = document.getElementById('nombre').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const telefono = document.getElementById('telefono').value.trim();
-    const tipoCabana = document.getElementById('tipo-cabana').value;
-    const mensaje = document.getElementById('mensaje').value.trim();
+        // Get form values
+        const nombreInput = document.getElementById('nombre');
+        const emailInput = document.getElementById('email');
+        const telefonoInput = document.getElementById('telefono');
+        const tipoCabanaInput = document.getElementById('tipo-cabana');
+        const mensajeInput = document.getElementById('mensaje');
 
-    // Basic validation
-    if (!nombre || !email || !telefono || !tipoCabana || !mensaje) {
-        showNotification('Por favor, completa todos los campos', 'error');
-        return;
-    }
+        const nombre = nombreInput ? nombreInput.value.trim() : '';
+        const email = emailInput ? emailInput.value.trim() : '';
+        const telefono = telefonoInput ? telefonoInput.value.trim() : '';
+        const tipoCabana = tipoCabanaInput ? tipoCabanaInput.value : '';
+        const mensaje = mensajeInput ? mensajeInput.value.trim() : '';
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        showNotification('Por favor, ingresa un email válido', 'error');
-        return;
-    }
+        // Basic validation
+        if (!nombre || !email || !telefono || !tipoCabana || !mensaje) {
+            showNotification('Por favor, completa todos los campos', 'error');
+            return;
+        }
 
-    // Phone validation (basic)
-    const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-    if (!phoneRegex.test(telefono)) {
-        showNotification('Por favor, ingresa un teléfono válido', 'error');
-        return;
-    }
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showNotification('Por favor, ingresa un email válido', 'error');
+            return;
+        }
 
-    // Simulate form submission (in production, this would send to a server)
-    showNotification('¡Gracias! Tu solicitud ha sido enviada. Te contactaremos pronto.', 'success');
+        // Phone validation (basic)
+        const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+        if (!phoneRegex.test(telefono)) {
+            showNotification('Por favor, ingresa un teléfono válido', 'error');
+            return;
+        }
 
-    // Reset form
-    contactForm.reset();
-});
+        // Simulate form submission
+        showNotification('¡Gracias! Tu solicitud ha sido enviada. Te contactaremos pronto.', 'success');
+
+        // Reset form
+        contactForm.reset();
+    });
+
+    // === Prevent Default Form Submission on Enter in Text Inputs ===
+    const formInputs = contactForm.querySelectorAll('input');
+    formInputs.forEach(input => {
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && input.type !== 'submit') {
+                e.preventDefault();
+            }
+        });
+    });
+}
 
 // === Notification System ===
 function showNotification(message, type = 'success') {
@@ -139,31 +166,22 @@ function showNotification(message, type = 'success') {
         animation: slideInRight 0.3s ease;
     `;
 
-    // Add animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideInRight {
-            from {
-                transform: translateX(400px);
-                opacity: 0;
+    // Add animation styles if not already present
+    if (!document.getElementById('notification-styles')) {
+        const style = document.createElement('style');
+        style.id = 'notification-styles';
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(400px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
             }
-            to {
-                transform: translateX(0);
-                opacity: 1;
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(400px); opacity: 0; }
             }
-        }
-        @keyframes slideOutRight {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(400px);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
+        `;
+        document.head.appendChild(style);
+    }
 
     // Append to body
     document.body.appendChild(notification);
@@ -179,12 +197,13 @@ function showNotification(message, type = 'success') {
 
 // === Gallery Image Interaction ===
 const galleryImages = document.querySelectorAll('.cabin-gallery img');
-
-galleryImages.forEach(img => {
-    img.addEventListener('click', () => {
-        openLightbox(img.src, img.alt);
+if (galleryImages.length > 0) {
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            openLightbox(img.src, img.alt);
+        });
     });
-});
+}
 
 // === Lightbox for Gallery Images ===
 function openLightbox(imageSrc, imageAlt) {
@@ -241,25 +260,17 @@ function openLightbox(imageSrc, imageAlt) {
         closeBtn.style.transform = 'scale(1)';
     });
 
-    // Add animation styles
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.5);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-    `;
-    document.head.appendChild(style);
+    // Add animation styles if not present
+    if (!document.getElementById('lightbox-styles')) {
+        const style = document.createElement('style');
+        style.id = 'lightbox-styles';
+        style.textContent = `
+            @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+            @keyframes zoomIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+            @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+        `;
+        document.head.appendChild(style);
+    }
 
     // Append elements
     lightbox.appendChild(img);
@@ -275,16 +286,6 @@ function openLightbox(imageSrc, imageAlt) {
             }, 300);
         }
     });
-
-    // Add fadeOut animation
-    const fadeOutStyle = document.createElement('style');
-    fadeOutStyle.textContent = `
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
-    `;
-    document.head.appendChild(fadeOutStyle);
 }
 
 // === Scroll Reveal Animation ===
@@ -304,22 +305,13 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for scroll reveal
 const revealElements = document.querySelectorAll('.highlight-card, .cabin-detail, .about-grid');
-revealElements.forEach(el => {
-    el.style.opacity = '0';
-    observer.observe(el);
-});
-
-// === Prevent Default Form Submission on Enter in Text Inputs ===
-const formInputs = document.querySelectorAll('.contact-form input');
-formInputs.forEach(input => {
-    input.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' && input.type !== 'submit') {
-            e.preventDefault();
-        }
+if (revealElements.length > 0) {
+    revealElements.forEach(el => {
+        el.style.opacity = '0';
+        observer.observe(el);
     });
-});
+}
 
-// === Hero Carousel Logic ===
 // === Carousel Logic ===
 class Carousel {
     constructor(containerId, interval = 5000) {
@@ -348,12 +340,14 @@ class Carousel {
         this.startTimer();
 
         // Event Listeners for Indicators
-        this.indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                this.resetTimer();
-                this.showSlide(index);
+        if (this.indicators.length > 0) {
+            this.indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    this.resetTimer();
+                    this.showSlide(index);
+                });
             });
-        });
+        }
 
         // Event Listeners for Buttons (if they exist)
         if (this.prevBtn) {
@@ -383,10 +377,14 @@ class Carousel {
 
         // Remove active class
         this.slides.forEach(slide => slide.classList.remove('active'));
-        this.indicators.forEach(indicator => indicator.classList.remove('active'));
+        if (this.indicators.length > 0) {
+            this.indicators.forEach(indicator => indicator.classList.remove('active'));
+        }
 
         // Add active class
-        this.slides[this.currentSlide].classList.add('active');
+        if (this.slides[this.currentSlide]) {
+            this.slides[this.currentSlide].classList.add('active');
+        }
         if (this.indicators[this.currentSlide]) {
             this.indicators[this.currentSlide].classList.add('active');
         }
@@ -405,15 +403,15 @@ class Carousel {
     }
 
     resetTimer() {
-        clearInterval(this.timer);
+        if (this.timer) clearInterval(this.timer);
         this.startTimer();
     }
 }
 
 // Initialize Carousels when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Hero Carousel (Index)
-    new Carousel('hero-carousel', 6000);
+    // Hero Carousel (Index) - Targeting parent section to find indicators that are siblings to the content
+    new Carousel('inicio', 6000);
 
     // Hospedajes Carousels
     new Carousel('carousel-suite', 5000);
