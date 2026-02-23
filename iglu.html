@@ -15,6 +15,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 
 <body>
@@ -29,12 +30,34 @@
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="cabanas.html" class="nav-link">Cabañas</a>
-                </li>
-                <li><a href="hospedajes.html" class="nav-link">Hospedajes</a></li>
+                <li><a href="cabanas.html" class="nav-link">Cabañas</a></li>
                 <li><a href="iglu.html" class="nav-link active">Iglú</a></li>
+                <li><a href="camping.html" class="nav-link">Camping</a></li>
                 <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                <li class="nav-socials">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elmanantial.cabanas?rdid=XHXxS0G4KrCCRngO&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F181W1hrCRa%252F&checkpoint_src=any#"
+                            target="_blank" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/hotel_campestrelagloria?igsh=MWhuNjRrNWxpZTA5Yg=="
+                            target="_blank" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 32 32" id="Camada_1" version="1.1" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g>
+                                    <path
+                                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z" />
+                                    <path
+                                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8   c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z" />
+                                    <path
+                                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8   c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
             </ul>
 
             <div class="hamburger" id="hamburger">
@@ -48,7 +71,7 @@
     <!-- Header Banner -->
     <header class="hero" style="height: 50vh; min-height: 400px;">
         <div class="hero-overlay"></div>
-        <img src="assets/images/IMG_4897.JPG" alt="Iglú"
+        <img src="assets/img/banner_iglu.png" alt="Iglú"
             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
         <div class="hero-content">
             <h1 class="hero-title">Experiencia Iglú</h1>
@@ -59,54 +82,124 @@
     <!-- Iglú Content -->
     <section class="cabin-detail">
         <div class="container">
-            <div class="cabin-header">
-                <h2 class="cabin-title">Hospedaje Tipo Iglú</h2>
-                <p class="cabin-description">
-                    Vive una experiencia inolvidable en nuestro exclusivo Iglú. Perfecto para parejas que buscan algo
-                    diferente.
-                </p>
+            <!-- Iglú Moderno -->
+            <div class="accommodation-section">
+                <div class="accommodation-header">
+                    <h2 class="cabin-title">Iglú Moderno</h2>
+                    <p class="cabin-description">
+                        Nuestra versión más contemporánea. Disfruta de un diseño elegante y minimalista con todas las
+                        comodidades modernas en un entorno natural.
+                    </p>
+                </div>
+
+                <div class="accommodation-grid">
+                    <!-- Column Left: Carousel -->
+                    <div class="content-carousel" id="carousel-iglu-moderno">
+                        <div class="carousel-slide active">
+                            <img src="assets/img/imIMG_1986.jpg" alt="Interior IGLÚ Moderno de noche">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/imIMG_1987.jpg" alt="Exterior IGLÚ Moderno">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/imIMG_20250829_115241.jpg" alt="Vista interior IGLÚ Moderno de día">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/imIMG_20250829_115302.jpg" alt="Experiencia IGLÚ Moderno atardecer">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/imIMG_20250829_115408.jpg" alt="Experiencia IGLÚ Moderno atardecer">
+                        </div>
+
+
+                        <div class="carousel-indicators">
+                            <span class="indicator active"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                        </div>
+                        <button class="carousel-btn prev">&#10094;</button>
+                        <button class="carousel-btn next">&#10095;</button>
+                    </div>
+
+                    <!-- Column Right: Includes -->
+                    <div class="amenities-card">
+                        <h3>Incluye:</h3>
+                        <ul class="amenities-list">
+                            <li>🏡 Diseño moderno y minimalista</li>
+                            <li>🛏 Cama doble y baño privado</li>
+                            <li>🍽 Desayuno americano incluido</li>
+                            <li>🏊 Acceso a piscina</li>
+                            <li>📶 Wifi de alta velocidad</li>
+                            <li>⚽ Zonas verdes y salón de juegos</li>
+                            <li>🚗 Parqueadero privado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accommodation-footer">
+                    <span class="accommodation-price">$320.000 / noche</span>
+                    <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Iglú Moderno</a>
+                </div>
             </div>
 
-            <div class="cabin-amenities">
-                <h3>Incluye:</h3>
-                <ul class="amenities-list">
-                    <li>🏡 2 días / 1 noche en hospedaje tipo iglú</li>
-                    <li>🛏 Cama doble y baño privado (sin agua caliente)</li>
-                    <li>🍽 Desayuno americano: huevos al gusto, arepa, queso, fruta, jugo y café o chocolate</li>
-                    <li>🏊 Piscina para niños y adultos</li>
-                    <li>📶 Wifi + salón de juegos (billar, sapo, ping pong)</li>
-                    <li>⚽ Juegos infantiles y zonas verdes</li>
-                    <li>🚗 Parqueadero privado y seguridad 24/7</li>
-                </ul>
-            </div>
-
-            <!-- Carousel for Iglú -->
-            <div class="content-carousel" id="carousel-iglu">
-                <div class="carousel-slide active">
-                    <img src="assets/images/IMG_2155.JPG" alt="Interior IGLÚ de noche">
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/IMG_4897.JPG" alt="Exterior IGLÚ">
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/IMG_2121.JPG" alt="Vista interior IGLÚ de día">
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/IMG_2128.JPG" alt="Experiencia IGLÚ atardecer">
+            <!-- Iglú Rústico -->
+            <div class="accommodation-section">
+                <div class="accommodation-header">
+                    <h2 class="cabin-title">Iglú Rústico</h2>
+                    <p class="cabin-description">
+                        Vuelve a lo esencial con nuestro Iglú Rústico. Un espacio acogedor construido con materiales
+                        naturales para una verdadera desconexión.
+                    </p>
                 </div>
 
-                <div class="carousel-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
-                <button class="carousel-btn prev">&#10094;</button>
-                <button class="carousel-btn next">&#10095;</button>
-            </div>
+                <div class="accommodation-grid">
+                    <!-- Column Left: Carousel -->
+                    <div class="content-carousel" id="carousel-iglu-rustico">
+                        <div class="carousel-slide active">
+                            <img src="assets/img/irIMG_1979.jpg" alt="Interior IGLÚ Moderno de noche">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/irIMG_1981.jpg" alt="Exterior IGLÚ Moderno">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/irIMG_20250829_114431.jpg" alt="Vista interior IGLÚ Moderno de día">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/irIMG_20250829_114446.jpg" alt="Experiencia IGLÚ Moderno atardecer">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/irIMG_20250829_114613.jpg" alt="Experiencia IGLÚ Moderno atardecer">
+                        </div>
 
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Iglú</a>
+                        <div class="carousel-indicators">
+                            <span class="indicator active"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                        </div>
+                        <button class="carousel-btn prev">&#10094;</button>
+                        <button class="carousel-btn next">&#10095;</button>
+                    </div>
+
+                    <!-- Column Right: Includes -->
+                    <div class="amenities-card">
+                        <h3>Incluye:</h3>
+                        <ul class="amenities-list">
+                            <li>🪵 Diseño artesanal rústico</li>
+                            <li>🛏 Cama doble y baño privado</li>
+                            <li>🍽 Desayuno tradicional</li>
+                            <li>🏊 Acceso a piscina</li>
+                            <li>🍃 Conexión profunda con la naturaleza</li>
+                            <li>⚽ Zonas de descanso</li>
+                            <li>🚗 Parqueadero privado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accommodation-footer">
+                    <span class="accommodation-price">$280.000 / noche</span>
+                    <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Iglú Rústico</a>
+                </div>
             </div>
         </div>
     </section>
@@ -124,22 +217,29 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="cabanas.html">Cabañas</a></li>
-                        <li><a href="hospedajes.html">Hospedajes</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Síguenos</h4>
                     <div class="social-links">
-                        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+                        <a href="https://www.facebook.com/elmanantial.cabanas?rdid=XHXxS0G4KrCCRngO&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F181W1hrCRa%252F&checkpoint_src=any#"
+                            target="_blank" class="social-link" aria-label="Facebook">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                             </svg>
                         </a>
-                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        <a href="https://www.instagram.com/hotel_campestrelagloria?igsh=MWhuNjRrNWxpZTA5Yg=="
+                            target="_blank" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 32 32" id="Camada_1" version="1.1" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g>
+                                    <path
+                                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z" />
+                                    <path
+                                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8   c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z" />
+                                    <path
+                                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8   c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z" />
+                                </g>
                             </svg>
                         </a>
                     </div>

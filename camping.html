@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zona de Camping en Hotel Campestre La Gloria - Próximamente">
+    <title>Camping | Hotel Campestre La Gloria</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <style>
+        .camping-coming-soon {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            min-height: 80vh;
+            /* Increased height for solid background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: var(--spacing-xl) var(--spacing-md);
+            position: relative;
+        }
+
+        .coming-soon-content {
+            max-width: 800px;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background-color: var(--primary-green);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .coming-soon-title {
+            font-family: var(--font-accent);
+            font-size: 4rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .coming-soon-text {
+            font-size: 1.25rem;
+            color: #cccccc;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.8;
+        }
+
+        .construction-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/LOGO1BANNER.png" alt="Hotel Campestre La Gloria Logo">
+                </a>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="cabanas.html" class="nav-link">Cabañas</a></li>
+                <li><a href="iglu.html" class="nav-link">Iglú</a></li>
+                <li><a href="camping.html" class="nav-link active">Camping</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                <li class="nav-socials">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elmanantial.cabanas?rdid=XHXxS0G4KrCCRngO&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F181W1hrCRa%252F&checkpoint_src=any#"
+                            target="_blank" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/hotel_campestrelagloria?igsh=MWhuNjRrNWxpZTA5Yg=="
+                            target="_blank" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <header class="hero" style="height: 30vh; min-height: 200px; background-color: #121212;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Zona de Camping</h1>
+            <p class="hero-subtitle">Conexión pura con la naturaleza</p>
+        </div>
+    </header>
+
+    <!-- Coming Soon Section -->
+    <section class="camping-coming-soon">
+        <div class="coming-soon-content">
+            <span class="construction-icon">🏕️ 🏗️</span>
+            <span class="coming-soon-badge">En Construcción</span>
+            <h2 class="coming-soon-title">Próximamente</h2>
+            <p class="coming-soon-text">
+                Estamos preparando el mejor espacio para que conectes con la naturaleza bajo las estrellas.
+                Nuestra zona de camping contará con todas las comodidades para una experiencia inolvidable
+                en el corazón del Lago Calima.
+            </p>
+            <a href="index.html#contacto" class="btn btn-primary">¡Avísenme cuando esté listo!</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Hotel Campestre La Gloria</h4>
+                    <p>Tu refugio de tranquilidad en el Lago Calima</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cabanas.html">Cabañas</a></li>
+                        <li><a href="iglu.html">Iglú</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elmanantial.cabanas?rdid=XHXxS0G4KrCCRngO&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F181W1hrCRa%252F&checkpoint_src=any#"
+                            target="_blank" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/hotel_campestrelagloria?igsh=MWhuNjRrNWxpZTA5Yg=="
+                            target="_blank" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hotel Campestre La Gloria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

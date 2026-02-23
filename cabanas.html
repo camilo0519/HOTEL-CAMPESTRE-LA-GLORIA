@@ -15,6 +15,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 
 <body>
@@ -29,12 +30,34 @@
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="cabanas.html" class="nav-link active">Cabañas</a>
-                </li>
-                <li><a href="hospedajes.html" class="nav-link">Hospedajes</a></li>
+                <li><a href="cabanas.html" class="nav-link active">Cabañas</a></li>
                 <li><a href="iglu.html" class="nav-link">Iglú</a></li>
+                <li><a href="camping.html" class="nav-link">Camping</a></li>
                 <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                <li class="nav-socials">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elmanantial.cabanas?rdid=XHXxS0G4KrCCRngO&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F181W1hrCRa%252F&checkpoint_src=any#"
+                            target="_blank" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/hotel_campestrelagloria?igsh=MWhuNjRrNWxpZTA5Yg=="
+                            target="_blank" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 32 32" id="Camada_1" version="1.1" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g>
+                                    <path
+                                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z" />
+                                    <path
+                                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8   c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z" />
+                                    <path
+                                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8   c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
             </ul>
 
             <div class="hamburger" id="hamburger">
@@ -48,7 +71,7 @@
     <!-- Header Banner -->
     <header class="hero" style="height: 50vh; min-height: 400px;">
         <div class="hero-overlay"></div>
-        <img src="assets/images/IMG_4896.JPG" alt="Cabañas"
+        <img src="assets/img/banner_cabana.png" alt="Cabañas"
             style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
         <div class="hero-content">
             <h1 class="hero-title">Nuestras Cabañas</h1>
@@ -56,114 +79,142 @@
         </div>
     </header>
 
-    <!-- Cabaña Grupal -->
-    <section class="cabin-detail" id="grupal">
+    <!-- Cabañas Content -->
+    <section class="cabin-detail">
         <div class="container">
-            <div class="cabin-header">
-                <h2 class="cabin-title">Cabaña Grupal</h2>
-                <p class="cabin-description">
-                    Ideal para familias o grupos que quieren desconectarse y disfrutar juntos. (Máximo 6 personas por
-                    cabaña).
-                </p>
+
+            <!-- Cabaña Tipo 2: Cabaña Pareja -->
+            <div class="accommodation-section">
+                <div class="accommodation-header">
+                    <h2 class="cabin-title">Cabaña Pareja</h2>
+                    <p class="cabin-description">
+                        El rincón ideal para una escapada romántica. Disfruta de la privacidad y el encanto de nuestra
+                        cabaña diseñada especialmente para dos.
+                    </p>
+                </div>
+
+                <div class="accommodation-grid">
+                    <!-- Column Left: Carousel -->
+                    <div class="content-carousel" id="carousel-pareja">
+                        <div class="carousel-slide active">
+                            <img src="assets/img/cpIMG_1972.jpg" alt="Cabaña Pareja Exterior">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cpIMG_1973.jpg" alt="Cabaña Pareja Interior">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cpIMG_1978.jpg" alt="Cabaña Pareja Vista">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cpIMG_20250829_111803.jpg" alt="Cabaña Pareja Vista">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cpIMG_20250829_112045.jpg" alt="Cabaña Pareja Vista">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cpIMG_20250829_112106.jpg" alt="Cabaña Pareja Vista">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cpIMG_20250829_112234.jpg" alt="Cabaña Pareja Vista">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cpIMG_20250829_112250.jpg" alt="Cabaña Pareja Vista">
+                        </div>
+
+
+                        <div class="carousel-indicators">
+                            <span class="indicator active"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                        </div>
+                        <button class="carousel-btn prev">&#10094;</button>
+                        <button class="carousel-btn next">&#10095;</button>
+                    </div>
+
+                    <!-- Column Right: Includes -->
+                    <div class="amenities-card">
+                        <h3>Incluye:</h3>
+                        <ul class="amenities-list">
+                            <li>Cama King Size con dosel</li>
+                            <li>Baño privado con acabados en piedra</li>
+                            <li>Mini bar</li>
+                            <li>Terraza privada con vista al bosque</li>
+                            <li>Desayuno romántico incluido</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accommodation-footer">
+                    <span class="accommodation-price">$250.000 / noche por pareja</span>
+                    <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Cabaña Pareja</a>
+                </div>
             </div>
 
-            <div class="cabin-amenities">
-                <h3>Incluye:</h3>
-                <ul class="amenities-list">
-                    <li>🏡 2 días / 1 noche en cabaña privada (hasta 6 personas)</li>
-                    <li>🍽 Desayuno americano: huevos al gusto, arepa, queso, jugo, café o chocolate</li>
-                    <li>🏊 Piscina para niños y adultos</li>
-                    <li>📶 Wifi + salón de juegos (billar, sapo, ping pong)</li>
-                    <li>⚽ Juegos infantiles y zonas verdes</li>
-                    <li>🚗 Parqueadero privado y seguridad 24/7</li>
-                    <li>🛌 Ropa de cama completa</li>
-                </ul>
+            <!-- Cabaña Tipo 1: Cabaña Grupal -->
+            <div class="accommodation-section">
+                <div class="accommodation-header">
+                    <h2 class="cabin-title">Cabaña Grupal</h2>
+                    <p class="cabin-description">
+                        Nuestra cabaña más amplia, perfecta para familias o grupos de amigos que desean compartir una
+                        experiencia única rodeados de naturaleza.
+                    </p>
+                </div>
+
+                <div class="accommodation-grid">
+                    <!-- Column Left: Carousel -->
+                    <div class="content-carousel" id="carousel-grupal">
+                        <div class="carousel-slide active">
+                            <img src="assets/img/cgIMG_1974.jpg" alt="Cabaña Grupal Exterior">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cgIMG_1977.jpg" alt="Cabaña Grupal Sala">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cgIMG_20250829_113459.jpg" alt="Cabaña Grupal Dormitorio">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cgIMG_20250829_113526.jpg" alt="Cabaña Grupal Dormitorio">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cgIMG_20250829_113605.jpg" alt="Cabaña Grupal Dormitorio">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cgIMG_20250829_113732.jpg" alt="Cabaña Grupal Dormitorio">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/cgWhatsApp Image 2023-12-17 at 8.59.26 PM (2).jpg"
+                                alt="Cabaña Grupal Dormitorio">
+                        </div>
+
+                        <div class="carousel-indicators">
+                            <span class="indicator active"></span>
+                            <span class="indicator"></span>
+                            <span class="indicator"></span>
+                        </div>
+                        <button class="carousel-btn prev">&#10094;</button>
+                        <button class="carousel-btn next">&#10095;</button>
+                    </div>
+
+                    <!-- Column Right: Includes -->
+                    <div class="amenities-card">
+                        <h3>Incluye:</h3>
+                        <ul class="amenities-list">
+                            <li>Capacidad hasta 8 personas</li>
+                            <li>3 habitaciones amplias</li>
+                            <li>Cocina totalmente equipada</li>
+                            <li>Zona de BBQ privada</li>
+                            <li>Sala con chimenea</li>
+                            <li>Acceso a todas las áreas sociales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accommodation-footer">
+                    <span class="accommodation-price">$120.000 / noche por persona (Minimo 3 personas por cabaña)</span>
+                    <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Cabaña Grupal</a>
+                </div>
             </div>
 
-            <!-- Carousel for Cabaña Grupal -->
-            <div class="content-carousel" id="carousel-grupal">
-                <div class="carousel-slide active">
-                    <img src="assets/images/IMG_8684.jpg" alt="Sala cabaña familiar">
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/IMG_9712.JPEG" alt="Habitación cabaña familiar">
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/IMG_3712.jpg" alt="Cocina cabaña familiar">
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/IMG_8687.jpg" alt="Terraza cabaña familiar">
-                </div>
-
-                <div class="carousel-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
-                <button class="carousel-btn prev">&#10094;</button>
-                <button class="carousel-btn next">&#10095;</button>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Cabaña Grupal</a>
-            </div>
-        </div>
-    </section>
-
-    <hr style="border: 0; border-top: 1px solid #ddd; width: 80%; margin: 2rem auto;">
-
-    <!-- Cabaña Pareja -->
-    <section class="cabin-detail alt" id="pareja">
-        <div class="container">
-            <div class="cabin-header">
-                <h2 class="cabin-title">Cabaña Pareja</h2>
-                <p class="cabin-description">
-                    Ideal para una escapada romántica. Disfruta de la privacidad y el confort en medio de la naturaleza.
-                </p>
-            </div>
-
-            <div class="cabin-amenities">
-                <h3>Incluye:</h3>
-                <ul class="amenities-list">
-                    <li>🏡 2 días / 1 noche en cabaña privada para parejas</li>
-                    <li>🛏 Cama doble y baño con agua caliente</li>
-                    <li>🍽 Desayuno americano: huevos al gusto, arepa, queso, jugo y café o chocolate</li>
-                    <li>🏊 Piscina para niños y adultos</li>
-                    <li>📶 Wifi + salón de juegos (billar, sapo, ping pong)</li>
-                    <li>⚽ Juegos infantiles y zonas verdes</li>
-                    <li>🚗 Parqueadero privado y seguridad 24/7</li>
-                </ul>
-            </div>
-
-            <!-- Carousel for Cabaña Pareja -->
-            <div class="content-carousel" id="carousel-pareja">
-                <div class="carousel-slide active">
-                    <img src="assets/images/IMG_2106.JPG" alt="Interior cabaña parejas">
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/IMG_2121.JPG" alt="Terraza privada cabaña parejas">
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/IMG_2128.JPG" alt="Baño cabaña parejas">
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/IMG_4896.JPG" alt="Exterior cabaña parejas">
-                </div>
-
-                <div class="carousel-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
-                <button class="carousel-btn prev">&#10094;</button>
-                <button class="carousel-btn next">&#10095;</button>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="https://www.google.com" target="_blank" class="btn btn-primary">Reservar Cabaña Pareja</a>
-            </div>
         </div>
     </section>
 
@@ -179,23 +230,31 @@
                     <h4>Enlaces Rápidos</h4>
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="hospedajes.html">Hospedajes</a></li>
+                        <li><a href="cabanas.html">Cabañas</a></li>
                         <li><a href="iglu.html">Iglú</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Síguenos</h4>
                     <div class="social-links">
-                        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+                        <a href="https://www.facebook.com/elmanantial.cabanas?rdid=XHXxS0G4KrCCRngO&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F181W1hrCRa%252F&checkpoint_src=any#"
+                            target="_blank" class="social-link" aria-label="Facebook">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                             </svg>
                         </a>
-                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        <a href="https://www.instagram.com/hotel_campestrelagloria?igsh=MWhuNjRrNWxpZTA5Yg=="
+                            target="_blank" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 32 32" id="Camada_1" version="1.1" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g>
+                                    <path
+                                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z" />
+                                    <path
+                                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8   c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z" />
+                                    <path
+                                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8   c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z" />
+                                </g>
                             </svg>
                         </a>
                     </div>

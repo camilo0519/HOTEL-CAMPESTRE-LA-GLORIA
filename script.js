@@ -422,8 +422,9 @@ document.addEventListener('DOMContentLoaded', () => {
     new Carousel('carousel-grupal', 5000);
     new Carousel('carousel-pareja', 5000);
 
-    // Iglú Carousel
-    new Carousel('carousel-iglu', 5000);
+    // Iglú Carousels
+    new Carousel('carousel-iglu-moderno', 5000);
+    new Carousel('carousel-iglu-rustico', 5000);
 
     console.log('✅ Carousels initialized');
 });

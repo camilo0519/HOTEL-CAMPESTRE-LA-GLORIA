@@ -523,6 +523,81 @@ p {
     background-color: var(--cream-white);
 }
 
+/* === New Accommodation Grid Layout === */
+.accommodation-section {
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.accommodation-section:last-of-type {
+    border-bottom: none;
+}
+
+.accommodation-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+}
+
+.accommodation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    align-items: stretch;
+    /* Iguala la altura de las columnas */
+    margin-bottom: var(--spacing-md);
+}
+
+.accommodation-grid .content-carousel {
+    margin-bottom: 0;
+    /* Override existing margin */
+    height: 100%;
+    /* Take full height of grid cell */
+    min-height: 400px;
+}
+
+.amenities-card {
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.amenities-card h3 {
+    color: var(--primary-brown);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.accommodation-footer {
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+.accommodation-price {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Responsividad para el Grid */
+@media (max-width: 768px) {
+    .accommodation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .accommodation-grid .content-carousel {
+        height: 300px;
+        min-height: 300px;
+    }
+}
+
 .cabin-header {
     text-align: center;
     max-width: 900px;
