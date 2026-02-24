@@ -21,6 +21,7 @@
     --dark-text: #333333;
     --light-text: #666666;
     --white: #FFFFFF;
+    --whatsapp-green: #25D366;
 
     /* Typography */
     --font-heading: 'Montserrat', sans-serif;
@@ -1030,7 +1031,7 @@ p {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    background-color: var(--primary-green);
+    background-color: var(--whatsapp-green);
     color: var(--white);
     display: flex;
     align-items: center;
