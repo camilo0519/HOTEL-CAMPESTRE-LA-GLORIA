@@ -120,11 +120,7 @@
                     Nuestro hotel en el <strong>Lago Calima</strong> está rodeado de paisajes verdes, aire fresco y una
                     tranquilidad que te invita a relajarte desde el primer momento.
                 </p>
-                <p class="about-text">
-                    Podrás disfrutar de nuestro restaurante con deliciosa comida típica y platos a la carta, una
-                    refrescante piscina para días soleados y amplias zonas verdes para caminar, descansar o simplemente
-                    contemplar el paisaje.
-                </p>
+
                 <p class="about-text">
                     En el <strong>Hotel Campestre La Gloria</strong> podrás disfrutar de nuestro restaurante con
                     deliciosa comida típica y platos a la carta, una refrescante piscina para días soleados y amplias
@@ -151,7 +147,7 @@
                 <!-- Cabañas Card -->
                 <div class="highlight-card">
                     <a href="cabanas.html" style="text-decoration: none; color: inherit;">
-                        <img src="assets/img/IMG_1973.jpg" alt="Cabañas">
+                        <img src="assets/img/hd3.jpg" alt="Cabañas">
                         <h3>Cabañas</h3>
                         <p>Espacios acogedores para parejas y familias, rodeados de naturaleza.</p>
                         <div style="text-align: center; padding-bottom: 1.5rem;">
@@ -218,22 +214,23 @@
                 </div>
 
                 <!-- Contact Form -->
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/camilo.giraldo0519@gmail.com"
+                    method="POST">
                     <div class="form-group">
                         <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" placeholder="Tu nombre" required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" placeholder="Tu número de celular" required>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Tu número de celular" required>
                     </div>
                     <div class="form-group">
                         <label for="tipo-cabana">Interés</label>
-                        <select id="tipo-cabana">
+                        <select id="tipo-cabana" name="interes">
                             <option value="Cabaña Pareja">Cabaña Pareja</option>
                             <option value="Cabaña Grupal">Cabaña Grupal</option>
                             <option value="Iglú">Iglú</option>
@@ -242,7 +239,8 @@
                     </div>
                     <div class="form-group">
                         <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?"
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
                 </form>
@@ -287,9 +285,6 @@
                                         d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z" />
                                     <path
                                         d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8   c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z" />
-                                    d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z
-                                    M16,19.9c-2.1,0-3.8-1.7-3.8-3.8c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"
-                                    />
                                     <path
                                         d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z" />
                                 </g>
@@ -301,8 +296,10 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Hotel Campestre La Gloria. Todos los derechos reservados.</p>
-                <p style="font-size: 0.9rem; margin-top: 5px; opacity: 0.8;">Diseñado por <strong>JuanGiraldo</strong>
-                </p>
+                <div class="footer-designer">
+                    <p>Diseñado por</p>
+                    <img src="assets/images/designer-logo.svg" alt="Agénta Logo">
+                </div>
             </div>
         </div>
     </footer>

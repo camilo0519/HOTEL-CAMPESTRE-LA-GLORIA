@@ -119,10 +119,31 @@ if (contactForm) {
         }
 
         // Simulate form submission
-        showNotification('¡Gracias! Tu solicitud ha sido enviada. Te contactaremos pronto.', 'success');
+        const formData = new FormData(contactForm);
+        const action = contactForm.getAttribute('action');
 
-        // Reset form
-        contactForm.reset();
+        fetch(action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                showNotification('¡Gracias! Tu solicitud ha sido enviada. Te contactaremos pronto.', 'success');
+                contactForm.reset();
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        showNotification(data["errors"].map(error => error["message"]).join(", "), 'error');
+                    } else {
+                        showNotification('Hubo un error al enviar el formulario. Por favor, intenta de nuevo.', 'error');
+                    }
+                });
+            }
+        }).catch(error => {
+            showNotification('Hubo un error de conexión. Por favor, verifica tu internet.', 'error');
+        });
     });
 
     // === Prevent Default Form Submission on Enter in Text Inputs ===
